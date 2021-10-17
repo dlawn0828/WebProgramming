@@ -8,7 +8,6 @@ aside {
     flex: 1;
 }
 footer {
-    height: 150px;
     margin-top: 100px;
 }
 article, aside {
@@ -58,9 +57,20 @@ nav a:hover {
 article h2 {
     font-size: 25px;
 }
+#picture {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+#picture img {
+    border: black dashed 2px;
+    margin: 5px;
+    width: 250px;
+    position: center;
+}
 aside div {
     background-color: rgba(255, 192, 203, 0.4);
-    border: rgb(255, 192, 203, 0.6) solid 1px;
+    border: black solid 2px;
     padding: 10px 5px 5px 15px;
     margin: 10px 10px 0px 10px;
 }
@@ -96,4 +106,10 @@ aside ul {
 #p {
     margin-top: 5px;
     padding: 1px 10px;
+}
+footer h5 {
+    font-size: 15px;
+}
+footer p {
+    margin: 0px 20px 0px 100px; font-size: 12px; text-align: right;
 }

@@ -13,7 +13,6 @@
         *{font-family: "맑은 고딕", Arial, Helvetica, sans-serif; line-height: 150%;}
         li {list-style-type: none;}
         a {text-decoration: none;}
-        
     </style>
 </head>
 <body class="w3-margin-top">
@@ -25,7 +24,7 @@
                 <img class="w3-col s3" src="./캐릭터.jpg" alt="캐릭터">
                 <img class="w3-col s3" src="./캐릭터.jpg" alt="캐릭터">
             </div>
-            <h1>my homepage</h1>
+            <h1>JU's homepage</h1>
         </header>
         <nav>
             <ul>
@@ -37,21 +36,28 @@
         </nav>
         <section>
             <article>
-            <div id="photo">
+            <div class="w3-row" id="picture">
+                <img class="w3-col s5" src="./IMG_6008.jpg" alt="Donggung and Wolji">
+                <img class="w3-col s5" src="./IMG_6009.jpg" alt="Beach">
+                <img class="w3-col s5" src="./IMG_6010.jpg" alt="Cheonmachong">
+                <img class="w3-col s5" src="./IMG_6014.jpg" alt="lodging">
+            </div>
+            <br><br><br><br><br>
+            <iframe id="about" src="about.html" frameborder="0" width="70%" height="240px"></iframe>
+            <br><br><br><br><br><br><br>
+            <div id="interest">
+                <h2 style="font-weight: 500;">My Interest</h2>
                 <img src="./빅데이터.jpg" alt="bigdata">
             </div>
-            <br><br>
-            <iframe id="about" src="about.html" frameborder="0" width="70%" height="240px"></iframe>
-            <br><br><br>
             <hr>
-            <div id="interest">
+            <div>
                <h2>#미래수업 EP.23 가상공간에서 패권을 쥐기 위한 힘 '데이터'</h2>
                <iframe width="560" height="315" src="https://www.youtube.com/embed/mmJuOaCBqH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <hr>
-            <br>
+            <br><br><br><br><br>
             <div id="profile">
-                <h2>My Profile</h2>
+                <h2 style="font-weight: 500;">My Profile</h2>
                 <table border="1" class="w3-table-all w3-hoverable">
                     <tr class="w3-indigo">
                         <th>일자</th>
@@ -62,6 +68,11 @@
                         <td>현재</td>
                         <td>동아대학교 경영정보학과</td>
                         <td>2학년 재학</td>
+                    </tr>
+                    <tr>
+                        <td>~2020.02</td>
+                        <td>화명고등학교</td>
+                        <td>졸업</td>
                     </tr>
                     <tr>
                         <td>2021.04.15</td>
@@ -80,11 +91,11 @@
             <aside class="right">
                 <div id="login">
                     <h3>로그인</h3>
-                    <form action="#" method="POST"">
-                        <i class="fa fa-user" style="font-size: 15px; color: black;"></i>
-                        아이디 : <input type="text" name="id" id="id1"><br>
-                        비밀번호 : <input type="password" name="pass"><br>
-                        <input class="w3-small w3-padding-xsmall" id="l" type="submit" value="로그인">
+                    <form action="#" name="login_form" method="POST"">
+                        <i class="fa fa-user-o" style="font-size: 15px; color: black;"></i>
+                        아이디 : <input type="text" name="id1" id="id1"><br>
+                        비밀번호 : <input type="password" name="pass" id="pass"><br>
+                        <input class="w3-small w3-padding-xsmall" id="l" type="submit" value="로그인" onclick="check_input()">
                         <input class="w3-small w3-padding-xsmall" id="p" type="reset" value="초기화">
                         <ul>
                             <li><a href="" target="_blank">회원가입</a></li>
@@ -92,6 +103,21 @@
                         </ul>
                     </form>
                 </div>
+                <script type="text/Javascript">
+                   function check_input() {
+                       if (!document.login_form.id1.value)
+                    {
+                        alert("아이디를 입력하세요!");
+                        document.login_form.id1.focus();
+                        return;
+                    }
+                       if (!document.login_form.pass.value)
+                       {
+                           alert("비밀번호를 입력하세요!");
+                           return;
+                       }
+                   }
+                </script>
                 <div id="link">
                     <!-- 문서간의 이동 -->
                     </html>
@@ -108,24 +134,24 @@
                 <div class="w3-col s4 w3-container">
                     <h5> Contact Us</h5>
                     <ul>
-                        <li>Phone: 010-7203-****</li>
-                        <li>Email: <a href="mailto:2017633@donga.ac.kr" title="Email Us">2017633@donga.ac.kr</a></li>
-                        <li><a href="https://github.com/dlawn0828/dlawn0828.github.io"></a></li>
+                        <li>Phone : 010-7203-****</li>
+                        <li>Email : <a href="mailto:2017633@donga.ac.kr" title="Email Us">2017633@donga.ac.kr</a></li>
+                        <li>github : <a href="https://github.com/dlawn0828/WebProgramming">dlawn0828/WebProgramming</a></li>
                         <br>
                     </ul>
                 </div>
                 <div class="w3-col s4 w3-container">
                     <h5> Follow Us</h5>
-                    <a href="https://www.facebook.com/profile.php?id=100021904431198"><i class="fa fa-facebook" style="font-size: 30px; color: white;"></i></a>
-                    <a href="#"><i class="fa fa-twitter" style="font-size: 30px; color: white;"></i></a>
-                    <a href="http://https://www.instagram.com/?hl=ko"><i class="fa fa-instagram" style="font-size: 30px; color: white;"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100021904431198" style="margin: 2px 2px 2px 30px;"><i class="fa fa-facebook-square" style="font-size: 28px; color: white;"></i></a>
+                    <a href="#" style="margin: 2px;"><i class="fa fa-twitter" style="font-size: 30px; color: white;"></i></a>
+                    <a href="http://https://www.instagram.com/?hl=ko" style="margin: 2px;"><i class="fa fa-instagram" style="font-size: 30px; color: white;"></i></a>
                 </div>
                 <div class="w3-col s4 w3-container">
                     <h5> About Us</h5>
-                    <ul>
-                        <br><br><br>
-                        <li>Copyright (c) 2021 imeunju</li>
-                    </ul>
+                    <a href="https://blog.naver.com/dlawn0828" style="margin-left: 30px;">MY BOLG<i class="fa fa-info-circle" style="font-size: 20px; color: white; margin-left: 10px;"></i></a>
+                    <br><br><br>
+                    <p>Copyright &copy; 2021 임은주</p>
+                    <p>IM EUNJU</p>
                 </div>
         </div>
         </footer>
